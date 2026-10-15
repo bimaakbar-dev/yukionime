@@ -1,4 +1,3 @@
-// src/pages/api/v1/anime.json.ts
 import type { APIRoute } from 'astro';
 import { getAllAnime } from '~/lib/anime';
 import { jsonResponse, corsPreflightResponse } from '~/lib/api/response';
@@ -20,6 +19,7 @@ export const GET: APIRoute = async () => {
         season: d.season ?? null,
         year: d.year ?? null,
         episodes: d.episodes ?? null,
+        episodeCount: d.episodeList?.length ?? 0,
         duration: d.duration ?? null,
         rating: d.rating ?? null,
         genres: d.genres,
