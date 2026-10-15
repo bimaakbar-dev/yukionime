@@ -19,7 +19,6 @@ export const GET: APIRoute = async () => {
         season: d.season ?? null,
         year: d.year ?? null,
         episodes: d.episodes ?? null,
-        episodeCount: d.episodeList?.length ?? 0,
         duration: d.duration ?? null,
         rating: d.rating ?? null,
         genres: d.genres,
